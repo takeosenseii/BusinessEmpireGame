@@ -40,6 +40,17 @@ project(":core") {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    test {
+        testLogging {
+            events "passed", "skipped", "failed"
+            exceptionFormat "full"
+        }
+        reports {
+            html.required = true
+            junitXml.required = true
+        }
+    }
+
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
