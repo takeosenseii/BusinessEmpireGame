@@ -10,10 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: read
+      contents: write
+      packages: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up JDK
         uses: actions/setup-java@v2
@@ -29,19 +31,22 @@ jobs:
         
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: test-results
           path: core/build/reports/tests/
+          retention-days: 5
 
   build:
     needs: test
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: read
+      contents: write
+      packages: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up JDK
         uses: actions/setup-java@v2
@@ -59,7 +64,8 @@ jobs:
         run: ./gradlew assembleDebug
         
       - name: Upload APK
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: app-debug
           path: android/build/outputs/apk/debug/android-debug.apk
+          retention-days: 5
