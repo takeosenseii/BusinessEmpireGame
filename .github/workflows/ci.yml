@@ -27,7 +27,7 @@ jobs:
         run: chmod +x gradlew
         
       - name: Run tests
-        run: ./gradlew test
+        run: ./gradlew :core:test --info
         
       - name: Upload test results
         if: always()
@@ -35,8 +35,8 @@ jobs:
         with:
           name: test-results
           path: |
-            core/build/test-results/
-            core/build/reports/tests/test/
+            **/build/test-results/
+            **/build/reports/tests/
           retention-days: 5
 
   build:
@@ -63,13 +63,13 @@ jobs:
         run: chmod +x gradlew
         
       - name: Build debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew :android:assembleDebug --info
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           path: |
-            android/build/outputs/apk/debug/
-            android/build/reports/
+            **/build/outputs/
+            **/build/reports/
           retention-days: 5
