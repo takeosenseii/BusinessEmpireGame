@@ -1,0 +1,50 @@
+# Gradle files
+.gradle/
+build/
+local.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Android Studio
+/*/build/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+.navigation/
+*.ipr
+*~
+*.swp
+
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+.gradle/
+proguard/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# LibGDX specific
+*.prefs
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
