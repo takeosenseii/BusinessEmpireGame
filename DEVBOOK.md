@@ -8,7 +8,10 @@
 - [x] Configuration des outils de test (JUnit, Mockito)
 - [x] Mise en place de la structure du projet avec packages de tests
 - [x] Configuration du système de contrôle de version (Git)
-- [ ] Mise en place de l'intégration continue (CI)
+- [-] Mise en place de l'intégration continue (CI)
+  - [x] Configuration des workflows GitHub Actions
+  - [ ] Création du dépôt GitHub
+  - [ ] Push initial et vérification des workflows
 
 ### Phase 2: Core Game Systems
 - [ ] Système de gestion des assets
@@ -110,7 +113,20 @@
 - ✅ Mise en place de l'environnement de test (JUnit, Mockito)
 - ✅ Création du premier test unitaire
 - ✅ Configuration de Git et premier commit
-- 📝 Prochaine étape: Mise en place de l'intégration continue (CI)
+- ✅ Configuration de GitHub Actions pour CI/CD
+- 📝 Prochaine étape: Développement du système d'économie en TDD
+
+### Configuration CI/CD
+Le pipeline CI/CD inclut :
+- Compilation du projet
+- Exécution des tests unitaires
+- Construction de l'APK Android
+- Stockage des artefacts (APK et rapports de tests)
+
+Branches surveillées :
+- main
+- master
+- develop
 
 ### Structure du Projet
 ```
