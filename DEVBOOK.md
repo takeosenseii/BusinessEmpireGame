@@ -7,7 +7,7 @@
 - [x] Configuration du projet LibGDX
 - [x] Configuration des outils de test (JUnit, Mockito)
 - [x] Mise en place de la structure du projet avec packages de tests
-- [ ] Configuration du système de contrôle de version (Git)
+- [x] Configuration du système de contrôle de version (Git)
 - [ ] Mise en place de l'intégration continue (CI)
 
 ### Phase 2: Core Game Systems
@@ -109,7 +109,8 @@
 - ✅ Configuration du système de build avec Gradle
 - ✅ Mise en place de l'environnement de test (JUnit, Mockito)
 - ✅ Création du premier test unitaire
-- 📝 Prochaine étape: Développement du système d'économie en TDD
+- ✅ Configuration de Git et premier commit
+- 📝 Prochaine étape: Mise en place de l'intégration continue (CI)
 
 ### Structure du Projet
 ```
